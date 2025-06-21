@@ -1,0 +1,29 @@
+{
+  "builders": [
+    {
+      "firmware": "bios",
+      "type": "vmware-iso",
+      "boot_command": [
+        "<tab><wait>",
+        " ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/ks.cfg<wait>",
+        " -- <wait>",
+        "<enter><wait>"
+      ],
+      "boot_wait": "10s",
+      "guest_os_type": "centos-9",
+      "http_directory": "./http",
+      "iso_url": "D:\\ISOs\\CentOS-Stream-9-latest-x86_64-dvd1.iso",
+      "iso_checksum": "sha256:8FEF86E11C0397397BA0986CF21686369623AA1BCAD6DF3892FBC59EFB1C1BA5",
+      "shutdown_command": "shutdown -P now",
+      "disk_size": 100000,
+      "memory": 4096,
+      "version": 21,
+      "cpus": 2,
+      "cores": 1,
+      "ssh_password": "packer",
+      "ssh_username": "packer",
+      "ssh_timeout": "10000s",
+      "tools_upload_flavor": "linux"
+    }
+  ]
+}
