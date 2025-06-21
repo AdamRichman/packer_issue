@@ -1,0 +1,224 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Install the latest PowerShell for new features and improvements! https://aka.ms/PSWindows
+
+PS C:\vmware_builds> cd .\source\repos\rhel-builder\
+PS C:\vmware_builds\source\repos\rhel-builder> packer.exe build .\CentOS-9-build.json
+2025/06/21 17:32:47 [INFO] Packer version: 1.12.0 [go1.22.9 windows amd64]
+2025/06/21 17:32:47 [INFO] PACKER_CONFIG env var not set; checking the default config file path
+2025/06/21 17:32:47 [INFO] PACKER_CONFIG env var set; attempting to open config file: C:\vmware_builds\AppData\Roaming\packer.config
+2025/06/21 17:32:47 [WARN] Config file doesn't exist: C:\vmware_builds\AppData\Roaming\packer.config
+2025/06/21 17:32:47 [INFO] Setting cache directory: C:\vmware_builds\source\repos\rhel-builder\packer_cache
+e: cannot determine if process is in background: Process background check error: not implemented yet
+2025/06/21 17:32:47 [TRACE] listing potential installations for <nil> that match "". plugingetter.ListInstallationsOptions{PluginDirectory:"C:\\vmware_builds\\AppData\\Roaming\\packer.d\\plugins", BinaryInstallationOptions:plugingetter.BinaryInstallationOptions{APIVersionMajor:"5", APIVersionMinor:"0", OS:"windows", ARCH:"amd64", Ext:".exe", Checksummers:[]plugingetter.Checksummer{plugingetter.Checksummer{Type:"sha256", Hash:(*sha256.digest)(0xc000154f80)}}, ReleasesOnly:false}}
+2025/06/21 17:32:48 [INFO] found external [iso vmx] builders from vmware plugin
+2025/06/21 17:32:48 plugin "C:\\vmware_builds\\AppData\\Roaming\\packer.d\\plugins\\github.com\\hashicorp\\vmware\\packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe" does not support Protobuf, forcing use of Gob
+2025/06/21 17:32:48 [INFO] Starting external plugin C:\vmware_builds\AppData\Roaming\packer.d\plugins\github.com\hashicorp\vmware\packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe start builder iso
+2025/06/21 17:32:48 Starting plugin: C:\vmware_builds\AppData\Roaming\packer.d\plugins\github.com\hashicorp\vmware\packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe []string{"C:\\vmware_builds\\AppData\\Roaming\\packer.d\\plugins\\github.com\\hashicorp\\vmware\\packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe", "start", "builder", "iso"}
+2025/06/21 17:32:48 Waiting for RPC address for: C:\vmware_builds\AppData\Roaming\packer.d\plugins\github.com\hashicorp\vmware\packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe
+2025/06/21 17:32:48 packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe plugin: 2025/06/21 17:32:48 Plugin port range: [10000,25000]
+2025/06/21 17:32:48 packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe plugin: 2025/06/21 17:32:48 Plugin address: tcp 127.0.0.1:10000
+2025/06/21 17:32:48 packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe plugin: 2025/06/21 17:32:48 Waiting for connection...
+2025/06/21 17:32:48 Received tcp RPC address for C:\vmware_builds\AppData\Roaming\packer.d\plugins\github.com\hashicorp\vmware\packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe: addr is 127.0.0.1:10000
+2025/06/21 17:32:48 packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe plugin: 2025/06/21 17:32:48 Serving a plugin connection...
+2025/06/21 17:32:48 packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe plugin: 2025/06/21 17:32:48 [TRACE] starting builder iso
+2025/06/21 17:32:48 Preparing build: vmware-iso
+2025/06/21 17:32:48 Build debug mode: false
+vmware-iso: output will be in this color.
+2025/06/21 17:32:48 Force build: false
+
+2025/06/21 17:32:48 On error:
+2025/06/21 17:32:48 Waiting on builds to complete...
+2025/06/21 17:32:48 Starting build run: vmware-iso
+2025/06/21 17:32:48 Running builder: vmware-iso
+2025/06/21 17:32:48 [INFO] (telemetry) Starting builder vmware-iso
+2025/06/21 17:32:48 packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe plugin: 2025/06/21 17:32:48 Searching for file 'C:/Program Files (x86)/VMware/VMware Workstation/vmware.exe'
+2025/06/21 17:32:48 packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe plugin: 2025/06/21 17:32:48 Found file 'C:/Program Files (x86)/VMware/VMware Workstation/vmware.exe'
+2025/06/21 17:32:48 packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe plugin: 2025/06/21 17:32:48 Searching for file 'C:/Program Files (x86)/VMware/VMware Workstation/vmrun.exe'
+2025/06/21 17:32:48 packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe plugin: 2025/06/21 17:32:48 Found file 'C:/Program Files (x86)/VMware/VMware Workstation/vmrun.exe'
+2025/06/21 17:32:48 packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe plugin: 2025/06/21 17:32:48 Searching for file 'C:/Program Files (x86)/VMware/VMware Workstation/vmware-vdiskmanager.exe'
+2025/06/21 17:32:48 packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe plugin: 2025/06/21 17:32:48 Found file 'C:/Program Files (x86)/VMware/VMware Workstation/vmware-vdiskmanager.exe'
+2025/06/21 17:32:48 packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe plugin: 2025/06/21 17:32:48 VMware app path: C:/Program Files (x86)/VMware/VMware Workstation/vmware.exe
+2025/06/21 17:32:48 packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe plugin: 2025/06/21 17:32:48 vmrun path: C:/Program Files (x86)/VMware/VMware Workstation/vmrun.exe
+2025/06/21 17:32:48 packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe plugin: 2025/06/21 17:32:48 vdisk-manager path: C:/Program Files (x86)/VMware/VMware Workstation/vmware-vdiskmanager.exe
+2025/06/21 17:32:48 packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe plugin: 2025/06/21 17:32:48 Detected VMware Workstation version: 17
+2025/06/21 17:32:48 packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe plugin: 2025/06/21 17:32:48 Testing against vmware driver *common.Workstation10Driver, Success: true
+2025/06/21 17:32:48 packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe plugin: 2025/06/21 17:32:48 Searching for file 'C:/Program Files (x86)/VMware/VMware Workstation/linux.iso'
+2025/06/21 17:32:48 packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe plugin: 2025/06/21 17:32:48 Found file 'C:/Program Files (x86)/VMware/VMware Workstation/linux.iso'
+==> vmware-iso: Retrieving ISO
+==> vmware-iso: Trying D:\ISOs\CentOS-Stream-9-latest-x86_64-dvd1.iso
+2025/06/21 17:32:48 packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe plugin: 2025/06/21 17:32:48 Acquiring lock for: file://D:/ISOs/CentOS-Stream-9-latest-x86_64-dvd1.iso?checksum=sha256%!A(MISSING)8fef86e11c0397397ba0986cf21686369623aa1bcad6df3892fbc59efb1c1ba5 (C:\vmware_builds\source\repos\rhel-builder\packer_cache\d73a1c7535efbee8646644571ea903691fb6279b.iso.lock)
+==> vmware-iso: Trying file://D:/ISOs/CentOS-Stream-9-latest-x86_64-dvd1.iso?checksum=sha256%3A8fef86e11c0397397ba0986cf21686369623aa1bcad6df3892fbc59efb1c1ba5
+==> vmware-iso: Download failed source path error: CreateFile D:/ISOs/CentOS-Stream-9-latest-x86_64-dvd1.iso: The system cannot find the path specified.
+2025/06/21 17:32:48 packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe plugin: 2025/06/21 17:32:48 Leaving retrieve loop for ISO
+==> vmware-iso: error downloading ISO: [source path error: CreateFile D:/ISOs/CentOS-Stream-9-latest-x86_64-dvd1.iso: The system cannot find the path specified.]
+2025/06/21 17:32:48 [INFO] (telemetry) ending vmware-iso
+==> Wait completed after 35 milliseconds 536 microseconds
+2025/06/21 17:32:48 machine readable: error-count []string{"1"}
+==> Some builds didn't complete successfully and had errors:
+Build 'vmware-iso' errored after 35 milliseconds 536 microseconds: error downloading ISO: [source path error: CreateFile D:/ISOs/CentOS-Stream-9-latest-x86_64-dvd1.iso: The system cannot find the path specified.]
+2025/06/21 17:32:48 machine readable: vmware-iso,error []string{"error downloading ISO: [source path error: CreateFile D:/ISOs/CentOS-Stream-9-latest-x86_64-dvd1.iso: The system cannot find the path specified.]"}
+
+==> Builds finished but no artifacts were created.
+==> Wait completed after 35 milliseconds 536 microseconds
+2025/06/21 17:32:48 [INFO] (telemetry) Finalizing.
+
+==> Some builds didn't complete successfully and had errors:
+--> vmware-iso: error downloading ISO: [source path error: CreateFile D:/ISOs/CentOS-Stream-9-latest-x86_64-dvd1.iso: The system cannot find the path specified.]
+
+==> Builds finished but no artifacts were created.
+2025/06/21 17:32:48 waiting for all plugin processes to complete...
+2025/06/21 17:32:48 C:\vmware_builds\AppData\Roaming\packer.d\plugins\github.com\hashicorp\vmware\packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe: plugin process exited
+PS C:\vmware_builds\source\repos\rhel-builder> D:
+PS D:\> c:
+PS C:\vmware_builds\source\repos\rhel-builder> packer.exe build .\CentOS-9-build.json
+2025/06/21 17:34:20 [INFO] Packer version: 1.12.0 [go1.22.9 windows amd64]
+2025/06/21 17:34:20 [INFO] PACKER_CONFIG env var not set; checking the default config file path
+2025/06/21 17:34:20 [INFO] PACKER_CONFIG env var set; attempting to open config file: C:\vmware_builds\AppData\Roaming\packer.config
+2025/06/21 17:34:20 [WARN] Config file doesn't exist: C:\vmware_builds\AppData\Roaming\packer.config
+2025/06/21 17:34:20 [INFO] Setting cache directory: C:\vmware_builds\source\repos\rhel-builder\packer_cache
+e: cannot determine if process is in background: Process background check error: not implemented yet
+2025/06/21 17:34:20 [TRACE] listing potential installations for <nil> that match "". plugingetter.ListInstallationsOptions{PluginDirectory:"C:\\vmware_builds\\AppData\\Roaming\\packer.d\\plugins", BinaryInstallationOptions:plugingetter.BinaryInstallationOptions{APIVersionMajor:"5", APIVersionMinor:"0", OS:"windows", ARCH:"amd64", Ext:".exe", Checksummers:[]plugingetter.Checksummer{plugingetter.Checksummer{Type:"sha256", Hash:(*sha256.digest)(0xc000560500)}}, ReleasesOnly:false}}
+2025/06/21 17:34:20 [INFO] found external [iso vmx] builders from vmware plugin
+2025/06/21 17:34:20 plugin "C:\\vmware_builds\\AppData\\Roaming\\packer.d\\plugins\\github.com\\hashicorp\\vmware\\packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe" does not support Protobuf, forcing use of Gob
+2025/06/21 17:34:20 [INFO] Starting external plugin C:\vmware_builds\AppData\Roaming\packer.d\plugins\github.com\hashicorp\vmware\packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe start builder iso
+2025/06/21 17:34:20 Starting plugin: C:\vmware_builds\AppData\Roaming\packer.d\plugins\github.com\hashicorp\vmware\packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe []string{"C:\\vmware_builds\\AppData\\Roaming\\packer.d\\plugins\\github.com\\hashicorp\\vmware\\packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe", "start", "builder", "iso"}
+2025/06/21 17:34:20 Waiting for RPC address for: C:\vmware_builds\AppData\Roaming\packer.d\plugins\github.com\hashicorp\vmware\packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe
+2025/06/21 17:34:20 packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe plugin: 2025/06/21 17:34:20 Plugin port range: [10000,25000]
+2025/06/21 17:34:20 packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe plugin: 2025/06/21 17:34:20 Plugin address: tcp 127.0.0.1:10000
+2025/06/21 17:34:20 packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe plugin: 2025/06/21 17:34:20 Waiting for connection...
+2025/06/21 17:34:20 Received tcp RPC address for C:\vmware_builds\AppData\Roaming\packer.d\plugins\github.com\hashicorp\vmware\packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe: addr is 127.0.0.1:10000
+2025/06/21 17:34:20 packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe plugin: 2025/06/21 17:34:20 Serving a plugin connection...
+2025/06/21 17:34:20 packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe plugin: 2025/06/21 17:34:20 [TRACE] starting builder iso
+2025/06/21 17:34:20 Preparing build: vmware-iso
+2025/06/21 17:34:20 Build debug mode: false
+vmware-iso: output will be in this color.
+
+2025/06/21 17:34:20 Force build: false
+2025/06/21 17:34:20 On error:
+2025/06/21 17:34:20 Waiting on builds to complete...
+2025/06/21 17:34:20 Starting build run: vmware-iso
+2025/06/21 17:34:20 Running builder: vmware-iso
+2025/06/21 17:34:20 [INFO] (telemetry) Starting builder vmware-iso
+2025/06/21 17:34:20 packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe plugin: 2025/06/21 17:34:20 Searching for file 'C:/Program Files (x86)/VMware/VMware Workstation/vmware.exe'
+2025/06/21 17:34:20 packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe plugin: 2025/06/21 17:34:20 Found file 'C:/Program Files (x86)/VMware/VMware Workstation/vmware.exe'
+2025/06/21 17:34:20 packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe plugin: 2025/06/21 17:34:20 Searching for file 'C:/Program Files (x86)/VMware/VMware Workstation/vmrun.exe'
+2025/06/21 17:34:20 packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe plugin: 2025/06/21 17:34:20 Found file 'C:/Program Files (x86)/VMware/VMware Workstation/vmrun.exe'
+2025/06/21 17:34:20 packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe plugin: 2025/06/21 17:34:20 Searching for file 'C:/Program Files (x86)/VMware/VMware Workstation/vmware-vdiskmanager.exe'
+2025/06/21 17:34:20 packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe plugin: 2025/06/21 17:34:20 Found file 'C:/Program Files (x86)/VMware/VMware Workstation/vmware-vdiskmanager.exe'
+2025/06/21 17:34:20 packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe plugin: 2025/06/21 17:34:20 VMware app path: C:/Program Files (x86)/VMware/VMware Workstation/vmware.exe
+2025/06/21 17:34:20 packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe plugin: 2025/06/21 17:34:20 vmrun path: C:/Program Files (x86)/VMware/VMware Workstation/vmrun.exe
+2025/06/21 17:34:20 packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe plugin: 2025/06/21 17:34:20 vdisk-manager path: C:/Program Files (x86)/VMware/VMware Workstation/vmware-vdiskmanager.exe
+2025/06/21 17:34:20 packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe plugin: 2025/06/21 17:34:20 Detected VMware Workstation version: 17
+2025/06/21 17:34:20 packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe plugin: 2025/06/21 17:34:20 Testing against vmware driver *common.Workstation10Driver, Success: true
+2025/06/21 17:34:20 packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe plugin: 2025/06/21 17:34:20 Searching for file 'C:/Program Files (x86)/VMware/VMware Workstation/linux.iso'
+2025/06/21 17:34:20 packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe plugin: 2025/06/21 17:34:20 Found file 'C:/Program Files (x86)/VMware/VMware Workstation/linux.iso'
+==> vmware-iso: Retrieving ISO
+==> vmware-iso: Trying D:\ISOs\CentOS-Stream-9-latest-x86_64-dvd1.iso
+2025/06/21 17:34:20 packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe plugin: 2025/06/21 17:34:20 Acquiring lock for: file://D:/ISOs/CentOS-Stream-9-latest-x86_64-dvd1.iso?checksum=sha256%!A(MISSING)8fef86e11c0397397ba0986cf21686369623aa1bcad6df3892fbc59efb1c1ba5 (C:\vmware_builds\source\repos\rhel-builder\packer_cache\d73a1c7535efbee8646644571ea903691fb6279b.iso.lock)
+==> vmware-iso: Trying file://D:/ISOs/CentOS-Stream-9-latest-x86_64-dvd1.iso?checksum=sha256%3A8fef86e11c0397397ba0986cf21686369623aa1bcad6df3892fbc59efb1c1ba5
+2025/06/21 17:34:36 packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe plugin: 2025/06/21 17:34:36 Received interrupt signal (count: 1). Ignoring.
+Cancelling build after receiving interrupt
+2025/06/21 17:34:36 Cancelling builder after context cancellation context canceled
+2025/06/21 17:36:00 packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe plugin: 2025/06/21 17:36:00 Received interrupt signal (count: 2). Ignoring.
+2025/06/21 17:36:05 packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe plugin: 2025/06/21 17:36:05 Received interrupt signal (count: 3). Ignoring.
+2025/06/21 17:36:05 packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe plugin: 2025/06/21 17:36:05 Received interrupt signal (count: 4). Ignoring.
+2025/06/21 17:36:05 packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe plugin: 2025/06/21 17:36:05 Received interrupt signal (count: 5). Ignoring.
+2025/06/21 17:36:06 packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe plugin: 2025/06/21 17:36:06 Received interrupt signal (count: 6). Ignoring.
+2025/06/21 17:40:41 packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe plugin: 2025/06/21 17:40:41 Leaving retrieve loop for ISO
+==> vmware-iso: file://D:/ISOs/CentOS-Stream-9-latest-x86_64-dvd1.iso?checksum=sha256%3A8fef86e11c0397397ba0986cf21686369623aa1bcad6df3892fbc59efb1c1ba5 => D:/ISOs/CentOS-Stream-9-latest-x86_64-dvd1.iso
+2025/06/21 17:40:41 [INFO] (telemetry) ending vmware-iso
+==> Wait completed after 6 minutes 20 seconds
+Build 'vmware-iso' errored after 6 minutes 20 seconds: build was cancelled
+2025/06/21 17:40:41 [INFO] (telemetry) Finalizing.
+
+==> Wait completed after 6 minutes 20 seconds
+Cleanly cancelled builds after being interrupted.
+2025/06/21 17:40:41 waiting for all plugin processes to complete...
+2025/06/21 17:40:41 C:\vmware_builds\AppData\Roaming\packer.d\plugins\github.com\hashicorp\vmware\packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe: plugin process exited
+PS C:\vmware_builds\source\repos\rhel-builder> packer.exe build .\CentOS-9-build.json > packer.log
+2025/06/21 17:41:07 [INFO] Packer version: 1.12.0 [go1.22.9 windows amd64]
+2025/06/21 17:41:07 [INFO] PACKER_CONFIG env var not set; checking the default config file path
+2025/06/21 17:41:07 [INFO] PACKER_CONFIG env var set; attempting to open config file: C:\vmware_builds\AppData\Roaming\packer.config
+2025/06/21 17:41:07 [WARN] Config file doesn't exist: C:\vmware_builds\AppData\Roaming\packer.config
+2025/06/21 17:41:07 [INFO] Setting cache directory: C:\vmware_builds\source\repos\rhel-builder\packer_cache
+e: cannot determine if process is in background: Process background check error: not implemented yet
+2025/06/21 17:41:07 [TRACE] listing potential installations for <nil> that match "". plugingetter.ListInstallationsOptions{PluginDirectory:"C:\\vmware_builds\\AppData\\Roaming\\packer.d\\plugins", BinaryInstallationOptions:plugingetter.BinaryInstallationOptions{APIVersionMajor:"5", APIVersionMinor:"0", OS:"windows", ARCH:"amd64", Ext:".exe", Checksummers:[]plugingetter.Checksummer{plugingetter.Checksummer{Type:"sha256", Hash:(*sha256.digest)(0xc0000dec00)}}, ReleasesOnly:false}}
+2025/06/21 17:41:07 [INFO] found external [iso vmx] builders from vmware plugin
+2025/06/21 17:41:07 plugin "C:\\vmware_builds\\AppData\\Roaming\\packer.d\\plugins\\github.com\\hashicorp\\vmware\\packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe" does not support Protobuf, forcing use of Gob
+2025/06/21 17:41:07 [INFO] Starting external plugin C:\vmware_builds\AppData\Roaming\packer.d\plugins\github.com\hashicorp\vmware\packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe start builder iso
+2025/06/21 17:41:07 Starting plugin: C:\vmware_builds\AppData\Roaming\packer.d\plugins\github.com\hashicorp\vmware\packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe []string{"C:\\vmware_builds\\AppData\\Roaming\\packer.d\\plugins\\github.com\\hashicorp\\vmware\\packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe", "start", "builder", "iso"}
+2025/06/21 17:41:07 Waiting for RPC address for: C:\vmware_builds\AppData\Roaming\packer.d\plugins\github.com\hashicorp\vmware\packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe
+2025/06/21 17:41:07 packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe plugin: 2025/06/21 17:41:07 Plugin port range: [10000,25000]
+2025/06/21 17:41:07 packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe plugin: 2025/06/21 17:41:07 Plugin address: tcp 127.0.0.1:10000
+2025/06/21 17:41:07 packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe plugin: 2025/06/21 17:41:07 Waiting for connection...
+2025/06/21 17:41:07 Received tcp RPC address for C:\vmware_builds\AppData\Roaming\packer.d\plugins\github.com\hashicorp\vmware\packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe: addr is 127.0.0.1:10000
+2025/06/21 17:41:07 packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe plugin: 2025/06/21 17:41:07 Serving a plugin connection...
+2025/06/21 17:41:07 packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe plugin: 2025/06/21 17:41:07 [TRACE] starting builder iso
+2025/06/21 17:41:07 Preparing build: vmware-iso
+2025/06/21 17:41:07 Build debug mode: false
+2025/06/21 17:41:07 Force build: false
+2025/06/21 17:41:07 On error:
+2025/06/21 17:41:07 Waiting on builds to complete...
+2025/06/21 17:41:07 Starting build run: vmware-iso
+2025/06/21 17:41:07 Running builder: vmware-iso
+2025/06/21 17:41:07 [INFO] (telemetry) Starting builder vmware-iso
+2025/06/21 17:41:07 packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe plugin: 2025/06/21 17:41:07 Searching for file 'C:/Program Files (x86)/VMware/VMware Workstation/vmware.exe'
+2025/06/21 17:41:07 packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe plugin: 2025/06/21 17:41:07 Found file 'C:/Program Files (x86)/VMware/VMware Workstation/vmware.exe'
+2025/06/21 17:41:07 packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe plugin: 2025/06/21 17:41:07 Searching for file 'C:/Program Files (x86)/VMware/VMware Workstation/vmrun.exe'
+2025/06/21 17:41:07 packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe plugin: 2025/06/21 17:41:07 Found file 'C:/Program Files (x86)/VMware/VMware Workstation/vmrun.exe'
+2025/06/21 17:41:07 packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe plugin: 2025/06/21 17:41:07 Searching for file 'C:/Program Files (x86)/VMware/VMware Workstation/vmware-vdiskmanager.exe'
+2025/06/21 17:41:07 packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe plugin: 2025/06/21 17:41:07 Found file 'C:/Program Files (x86)/VMware/VMware Workstation/vmware-vdiskmanager.exe'
+2025/06/21 17:41:07 packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe plugin: 2025/06/21 17:41:07 VMware app path: C:/Program Files (x86)/VMware/VMware Workstation/vmware.exe
+2025/06/21 17:41:07 packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe plugin: 2025/06/21 17:41:07 vmrun path: C:/Program Files (x86)/VMware/VMware Workstation/vmrun.exe
+2025/06/21 17:41:07 packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe plugin: 2025/06/21 17:41:07 vdisk-manager path: C:/Program Files (x86)/VMware/VMware Workstation/vmware-vdiskmanager.exe
+2025/06/21 17:41:07 packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe plugin: 2025/06/21 17:41:07 Detected VMware Workstation version: 17
+2025/06/21 17:41:07 packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe plugin: 2025/06/21 17:41:07 Testing against vmware driver *common.Workstation10Driver, Success: true
+2025/06/21 17:41:07 packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe plugin: 2025/06/21 17:41:07 Searching for file 'C:/Program Files (x86)/VMware/VMware Workstation/linux.iso'
+2025/06/21 17:41:07 packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe plugin: 2025/06/21 17:41:07 Found file 'C:/Program Files (x86)/VMware/VMware Workstation/linux.iso'
+2025/06/21 17:41:07 packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe plugin: 2025/06/21 17:41:07 Acquiring lock for: file://D:/ISOs/CentOS-Stream-9-latest-x86_64-dvd1.iso?checksum=sha256%!A(MISSING)8fef86e11c0397397ba0986cf21686369623aa1bcad6df3892fbc59efb1c1ba5 (C:\vmware_builds\source\repos\rhel-builder\packer_cache\d73a1c7535efbee8646644571ea903691fb6279b.iso.lock)
+2025/06/21 17:47:46 packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe plugin: 2025/06/21 17:47:46 Leaving retrieve loop for ISO
+2025/06/21 17:47:48 packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe plugin: 2025/06/21 17:47:48 No floppy files specified. Floppy disk will not be made.
+2025/06/21 17:47:48 packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe plugin: 2025/06/21 17:47:48 No CD files specified. CD disk will not be made.
+2025/06/21 17:47:48 packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe plugin: 2025/06/21 17:47:48 [INFO] Creating disk with Path: output-vmware-iso\disk.vmdk and Size: 100000M
+2025/06/21 17:47:48 packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe plugin: 2025/06/21 17:47:48 Executing: C:/Program Files (x86)/VMware/VMware Workstation/vmware-vdiskmanager.exe -c -s 100000M -a lsilogic -t 1 output-vmware-iso\disk.vmdk
+2025/06/21 17:47:49 packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe plugin: 2025/06/21 17:47:49 stdout: Creating disk 'output-vmware-iso\disk.vmdk'
+2025/06/21 17:47:49 packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe plugin: Virtual disk creation successful.
+2025/06/21 17:47:49 packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe plugin: 2025/06/21 17:47:49 stderr:
+2025/06/21 17:47:49 packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe plugin: 2025/06/21 17:47:49 Searching for file 'C:/ProgramData/VMware/netmap.conf'
+2025/06/21 17:47:49 packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe plugin: 2025/06/21 17:47:49 Found file 'C:/ProgramData/VMware/netmap.conf'
+2025/06/21 17:47:49 packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe plugin: 2025/06/21 17:47:49 Located the network mapper configuration file: C:/ProgramData/VMware/netmap.conf
+2025/06/21 17:47:49 packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe plugin: 2025/06/21 17:47:49 Writing VMX to: output-vmware-iso\packer-vmware-iso.vmx
+2025/06/21 17:47:49 packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe plugin: 2025/06/21 17:47:49 Configuring VMX...
+2025/06/21 17:47:49 packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe plugin: 2025/06/21 17:47:49 Writing VMX to: output-vmware-iso\packer-vmware-iso.vmx
+2025/06/21 17:47:49 packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe plugin: 2025/06/21 17:47:49 Suppressing messages in VMX
+2025/06/21 17:47:49 packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe plugin: 2025/06/21 17:47:49 Searching for file 'C:/ProgramData/VMware/netmap.conf'
+2025/06/21 17:47:49 packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe plugin: 2025/06/21 17:47:49 Found file 'C:/ProgramData/VMware/netmap.conf'
+2025/06/21 17:47:49 packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe plugin: 2025/06/21 17:47:49 Located the network mapper configuration file: C:/ProgramData/VMware/netmap.conf
+2025/06/21 17:47:49 packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe plugin: 2025/06/21 17:47:49 HostIP discovered device matching nat: vmnet8
+2025/06/21 17:47:49 packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe plugin: 2025/06/21 17:47:49 Searching for file 'C:/ProgramData/VMware/vmnetdhcp.conf'
+2025/06/21 17:47:49 packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe plugin: 2025/06/21 17:47:49 Found file 'C:/ProgramData/VMware/vmnetdhcp.conf'
+2025/06/21 17:47:49 packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe plugin: 2025/06/21 17:47:49 Host IP for the VMware machine: 192.168.126.1
+2025/06/21 17:47:49 packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe plugin: 2025/06/21 17:47:49 Found available port: 8490 on IP: 0.0.0.0
+2025/06/21 17:47:49 packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe plugin: 2025/06/21 17:47:49 Looking for available port between 5900 and 6000
+2025/06/21 17:47:49 packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe plugin: 2025/06/21 17:47:49 Found available port: 5982 on IP: 127.0.0.1
+2025/06/21 17:47:49 packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe plugin: 2025/06/21 17:47:49 Found available VNC port: 127.0.0.1:5982
+2025/06/21 17:47:49 packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe plugin: 2025/06/21 17:47:49 Writing VMX to: output-vmware-iso\packer-vmware-iso.vmx
+2025/06/21 17:47:49 packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe plugin: 2025/06/21 17:47:49 Executing: C:/Program Files (x86)/VMware/VMware Workstation/vmrun.exe -T ws start output-vmware-iso\packer-vmware-iso.vmx gui
+2025/06/21 17:56:27 packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe plugin: 2025/06/21 17:56:27 stdout: PID: 19340, log output: C:\vmware_builds\AppData\Local\Temp\vmware\vmware-ui-19340.log
+2025/06/21 17:56:27 packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe plugin: 2025/06/21 17:56:27 stderr: I/O warning : failed to load external entity "file:/C:/ProgramData/VMware/hostd/proxy.xml"
+2025/06/21 17:56:27 packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe plugin: I/O warning : failed to load external entity "file:/C:/ProgramData/VMware/hostd/proxy.xml"
+2025/06/21 17:56:27 packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe plugin: 2025/06/21 17:56:27 Executing: C:/Program Files (x86)/VMware/VMware Workstation/vmrun.exe -T ws list
+2025/06/21 17:56:28 packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe plugin: 2025/06/21 17:56:28 stdout: Total running VMs: 0
+2025/06/21 17:56:28 packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe plugin: 2025/06/21 17:56:28 stderr:
+2025/06/21 17:56:28 packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe plugin: 2025/06/21 17:56:28 failed to unlock port lockfile: close tcp 127.0.0.1:5982: use of closed network connection
+2025/06/21 17:56:28 [INFO] (telemetry) ending vmware-iso
+==> Wait completed after 15 minutes 20 seconds
+2025/06/21 17:56:28 machine readable: error-count []string{"1"}
+==> Some builds didn't complete successfully and had errors:
+2025/06/21 17:56:28 machine readable: vmware-iso,error []string{"error connecting to VNC: dial tcp 127.0.0.1:5982: connectex: No connection could be made because the target machine actively refused it."}
+==> Builds finished but no artifacts were created.
+2025/06/21 17:56:28 [INFO] (telemetry) Finalizing.
+2025/06/21 17:56:28 waiting for all plugin processes to complete...
+2025/06/21 17:56:28 C:\vmware_builds\AppData\Roaming\packer.d\plugins\github.com\hashicorp\vmware\packer-plugin-vmware_v1.1.0_x5.0_windows_amd64.exe: plugin process exited
